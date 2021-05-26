@@ -423,6 +423,8 @@ GameObject:
   m_Component:
   - component: {fileID: 467745753}
   - component: {fileID: 467745752}
+  - component: {fileID: 467745754}
+  - component: {fileID: 467745755}
   m_Layer: 0
   m_Name: Firefly (3)
   m_TagString: Untagged
@@ -506,6 +508,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &467745754
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467745751}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ff738d2b4f587fb4894345cd7aa1f53a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &467745755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 467745751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef2f78707083c446b7646c376055177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 1.2
+  anim: {fileID: 0}
 --- !u!4 &471210099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 477016, guid: 41dcf1459594f434a8a9bae6ae03eab0, type: 3}
@@ -1426,6 +1461,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1378890712}
   - component: {fileID: 1378890711}
+  - component: {fileID: 1378890713}
+  - component: {fileID: 1378890714}
   m_Layer: 0
   m_Name: Firefly
   m_TagString: Untagged
@@ -1509,6 +1546,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1378890713
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378890710}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ff738d2b4f587fb4894345cd7aa1f53a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1378890714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378890710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef2f78707083c446b7646c376055177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 1
+  anim: {fileID: 0}
 --- !u!1001 &1422347884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1823,6 +1893,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1770846561}
   - component: {fileID: 1770846560}
+  - component: {fileID: 1770846562}
+  - component: {fileID: 1770846563}
   m_Layer: 0
   m_Name: Firefly (1)
   m_TagString: Untagged
@@ -1906,6 +1978,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1770846562
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770846559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ff738d2b4f587fb4894345cd7aa1f53a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1770846563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770846559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef2f78707083c446b7646c376055177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 1.2
+  anim: {fileID: 0}
 --- !u!4 &1790347846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 489978, guid: 2d521608fcf07c346b5e2ed4049aa717, type: 3}
@@ -1921,6 +2026,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1812269477}
   - component: {fileID: 1812269476}
+  - component: {fileID: 1812269478}
+  - component: {fileID: 1812269479}
   m_Layer: 0
   m_Name: Firefly (2)
   m_TagString: Untagged
@@ -2004,6 +2111,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1812269478
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812269475}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ff738d2b4f587fb4894345cd7aa1f53a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1812269479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812269475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef2f78707083c446b7646c376055177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  offset: 0.8
+  anim: {fileID: 0}
 --- !u!850595691 &1862361994
 LightingSettings:
   m_ObjectHideFlags: 0

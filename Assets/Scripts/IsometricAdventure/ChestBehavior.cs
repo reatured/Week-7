@@ -28,4 +28,10 @@ public class ChestBehavior : MonoBehaviour
 
         }
     }
+
+    public void chestEvt()
+    {
+
+        Debug.Log("The Chest has Opened");
+    }
 }
