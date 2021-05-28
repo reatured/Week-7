@@ -19,6 +19,7 @@ public class ChestBehavior : MonoBehaviour
         {
             anim.SetBool("isOpen", true);
             ui.updateText();
+            Destroy(this.GetComponent<ChestBehavior>());
         }
     }
 
