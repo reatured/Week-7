@@ -10,8 +10,7 @@ AnimatorState:
   m_Name: Chest_Open_Copy
   m_Speed: 1
   m_CycleOffset: 0
-  m_Transitions:
-  - {fileID: 1327603801965254771}
+  m_Transitions: []
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -167,9 +166,6 @@ AnimatorStateMachine:
     m_State: {fileID: 8283955355809376177}
     m_Position: {x: 320, y: 120, z: 0}
   - serializedVersion: 1
-    m_State: {fileID: 191915147734842439}
-    m_Position: {x: 320, y: 220, z: 0}
-  - serializedVersion: 1
     m_State: {fileID: -7410734333109550103}
     m_Position: {x: 320, y: 30, z: 0}
   - serializedVersion: 1
@@ -199,7 +195,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer

@@ -8,7 +8,8 @@ public class FirstPersonCamera : MonoBehaviour
     public Camera playerCamera;
 
     public float deltaX;
-    public float deltaY;
+    public float deltaY, originalY;
+
 
     [Header("Mouse Sensitivity 0-1")]
     public float ms;
@@ -20,7 +21,7 @@ public class FirstPersonCamera : MonoBehaviour
     {
         playerCamera = Camera.main; //set player camera
         Cursor.visible = false; //hide the cursor
-
+        originalY = transform.rotation.eulerAngles.y;
     }
 
     // Update is called once per frame
@@ -32,7 +33,7 @@ public class FirstPersonCamera : MonoBehaviour
         xRot = Mathf.Clamp(xRot, -90f, 90f);
 
         playerCamera.transform.localRotation = Quaternion.Euler(xRot, 0, 0);
-        transform.rotation = Quaternion.Euler(0, yRot, 0);
+        transform.rotation = Quaternion.Euler(0, yRot + originalY, 0);
 
 
     }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChestBehavior : MonoBehaviour
 {
     public Animator anim;
+    public UIManager ui;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,17 +18,10 @@ public class ChestBehavior : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             anim.SetBool("isOpen", true);
-
+            ui.updateText();
         }
     }
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            anim.SetBool("isOpen", false);
 
-        }
-    }
 
     public void chestEvt()
     {
