@@ -44,7 +44,7 @@ public class ClickToMove : MonoBehaviour
         }
 
         if(agent.velocity.magnitude != 0) 
-        {
+        {   
             hasADestination = true;
         }
         else

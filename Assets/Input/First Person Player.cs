@@ -33,6 +33,14 @@ public class @FirstPersonPlayer : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""PickUp"",
+                    ""type"": ""Button"",
+                    ""id"": ""1d185b40-df4b-43ec-bd22-029778418dc6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -101,6 +109,17 @@ public class @FirstPersonPlayer : IInputActionCollection, IDisposable
                     ""action"": ""PlayerLook"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""ddd1df74-6286-48e8-8020-fd18922e01c4"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Mouse and Keyboard"",
+                    ""action"": ""PickUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -128,6 +147,7 @@ public class @FirstPersonPlayer : IInputActionCollection, IDisposable
         m_PlayerMovement = asset.FindActionMap("Player Movement", throwIfNotFound: true);
         m_PlayerMovement_PlayerMove = m_PlayerMovement.FindAction("PlayerMove", throwIfNotFound: true);
         m_PlayerMovement_PlayerLook = m_PlayerMovement.FindAction("PlayerLook", throwIfNotFound: true);
+        m_PlayerMovement_PickUp = m_PlayerMovement.FindAction("PickUp", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -179,12 +199,14 @@ public class @FirstPersonPlayer : IInputActionCollection, IDisposable
     private IPlayerMovementActions m_PlayerMovementActionsCallbackInterface;
     private readonly InputAction m_PlayerMovement_PlayerMove;
     private readonly InputAction m_PlayerMovement_PlayerLook;
+    private readonly InputAction m_PlayerMovement_PickUp;
     public struct PlayerMovementActions
     {
         private @FirstPersonPlayer m_Wrapper;
         public PlayerMovementActions(@FirstPersonPlayer wrapper) { m_Wrapper = wrapper; }
         public InputAction @PlayerMove => m_Wrapper.m_PlayerMovement_PlayerMove;
         public InputAction @PlayerLook => m_Wrapper.m_PlayerMovement_PlayerLook;
+        public InputAction @PickUp => m_Wrapper.m_PlayerMovement_PickUp;
         public InputActionMap Get() { return m_Wrapper.m_PlayerMovement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -200,6 +222,9 @@ public class @FirstPersonPlayer : IInputActionCollection, IDisposable
                 @PlayerLook.started -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnPlayerLook;
                 @PlayerLook.performed -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnPlayerLook;
                 @PlayerLook.canceled -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnPlayerLook;
+                @PickUp.started -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnPickUp;
+                @PickUp.performed -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnPickUp;
+                @PickUp.canceled -= m_Wrapper.m_PlayerMovementActionsCallbackInterface.OnPickUp;
             }
             m_Wrapper.m_PlayerMovementActionsCallbackInterface = instance;
             if (instance != null)
@@ -210,6 +235,9 @@ public class @FirstPersonPlayer : IInputActionCollection, IDisposable
                 @PlayerLook.started += instance.OnPlayerLook;
                 @PlayerLook.performed += instance.OnPlayerLook;
                 @PlayerLook.canceled += instance.OnPlayerLook;
+                @PickUp.started += instance.OnPickUp;
+                @PickUp.performed += instance.OnPickUp;
+                @PickUp.canceled += instance.OnPickUp;
             }
         }
     }
@@ -227,5 +255,6 @@ public class @FirstPersonPlayer : IInputActionCollection, IDisposable
     {
         void OnPlayerMove(InputAction.CallbackContext context);
         void OnPlayerLook(InputAction.CallbackContext context);
+        void OnPickUp(InputAction.CallbackContext context);
     }
 }
